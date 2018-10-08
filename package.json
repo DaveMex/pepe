@@ -1,0 +1,19 @@
+{
+  "name": "pepe",
+  "version": "1.0.0",
+  "description": "Pepe Jimenez website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaveMex/pepe.git"
+  },
+  "author": "David Hernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaveMex/pepe/issues"
+  },
+  "homepage": "https://github.com/DaveMex/pepe#readme"
+}

@@ -4,7 +4,7 @@
       
       var s           = $('.slider'),
           sWrapper    = s.find('.slider-wrapper'),
-          sItem       = s.find('.slide'),
+          sItem       = s.find('.slides'),
           btn         = s.find('.slider-link'),
           sWidth      = sItem.width(),
           sCount      = sItem.length,
@@ -49,4 +49,4 @@
     });
   })(jQuery);
   
-  $('.overlay').addClass('overlay-blue');
+  // $('.overlay').addClass('overlay-blue');

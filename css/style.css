@@ -14,27 +14,6 @@ html, body {
 ul {
     list-style-type: none;
 }
-/*
-nav li {
-    display: inline;
-    border: 1px solid #f2f2f2;
-    padding: .5em;
-    font-size: .7em;
-    margin: .3em;
-}
-nav li a {
-    text-decoration: none;
-    color: #ffffff;
-    padding: 1em;
-} */
-
-/* .mostrar:hover ~ .oculto {
-    display: block;
-}
-
-.oculto {
-    display: none;
-} */
 
 #container {
     display: grid;
@@ -139,9 +118,6 @@ footer img {
     grid-column: 1 / 9;
     grid-row-start: 2;
 }
-/* #cover canvas {
-    width: 100wv;
-} */
 
 summary {
     font-size: 2em;
@@ -190,7 +166,7 @@ summary:hover {
     .text-indice-galeria li { margin: 0; }
     .text-indice-galeria { padding: 0; }
     
-  }
+}
 /*.indice-galeria:nth-child(1) {
     background-image: url(../images/15-JMJR2197_01_tn.jpg);
     background-repeat: no-repeat;
@@ -212,11 +188,11 @@ summary:hover {
     grid-row: 2 / 3;
     background-color: #747474;
 }
-.portafolio-dentro canvas {
+/*.portafolio-dentro canvas {
     padding: 2em;
     float: left;
 }
-/* .portafolio-dentro p {
+ .portafolio-dentro p {
     padding: 1em;
 }
 .portafolio-dentro div {

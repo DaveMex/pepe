@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Merriweather:300,300i,400,400i|Six+Caps');
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    margin: 0;
+    background-color: #6c6c6c;
+}
+#container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-gap: 5px;
+    grid-template-areas:
+    ". . . . . . . ca"
+    ". . img img img img . ."
+    ". . img img img img . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    "pie pie pie pie pie pie pie pie"
+}
+ul {
+    list-style-type: none;
+}
+#holder {
+    grid-area: 1 / 1 / 6 / 6 ;
+}
+#galerias {
+    grid-area: 5 / 2 / 6 / 8 ;
+}
+#articulo {
+    grid-area: 3 / 4 / 5 / 8 ;
+    z-index: 15;
+}
+/* #holder img, #holder canvas{
+    object-fit: cover;
+    object-position: 100% 0;
+  
+    width: 100vw;
+    height: 950px;
+} */
+#imagen img, #imagen canvas {
+    width: 55vw;
+    margin: 2rem;
+    border: #f2f2f2 2px solid;
+    transform: rotate(5deg);
+    box-shadow: 5px 5px 10px #424242;
+}
+.logo {
+    width: 150px;
+    padding: 1rem;
+}
+h1 {
+    font-size: 20vw;
+    font-family: 'Six Caps', sans-serif;
+    line-height: 0;
+    position: absolute;
+    top: -5%;
+    left: 5%;
+    /* transform: translate(-50%, -50%); */
+    padding: 0 0.2rem;
+    color: #fff;
+    text-shadow: 5px 5px 10px #343434;
+}
+h2 {
+    font-size: 10vw;
+    font-family: 'Six Caps', sans-serif;
+    line-height: 0;
+    position: absolute;
+    top: 30%;
+    left: 12%;
+    /* transform: translate(-50%, -50%); */
+    padding: 0 0.2rem;
+    z-index: 10;
+    color: #fff;
+    text-shadow: 5px 5px 10px #343434;
+}
+.logo-social {
+    width: 2vw;
+}
+.back {
+    margin-top: 4em;
+    padding: 1em;
+    /* border: 1px solid #ffffff; */
+    background-color: rgba(255, 255, 255, 0.5);
+    height: auto;
+}
+details .texto {
+    height: 50vh;
+    overflow-y: scroll;
+    line-height: 1.8rem;
+}
+details {
+    font-family: 'Merriweather', serif;
+    color: #fff;
+}
+header {
+    grid-area: ca;
+}
+#imagen {
+    grid-area: img;
+}
+footer {
+    grid-area: pie;
+    color: #ffffff;
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+summary:hover {
+    cursor: pointer;
+}
+summary .autor {
+    font-size: .8em;
+    font-weight: 400;
+    font-style: italic;
+}
+/* Nav */
+ul {
+    list-style-type: none;
+}
+nav {
+    font-family: 'Merriweather', serif;
+}
+nav ul {
+	position:relative;
+	float:left;
+}
+nav ul a {
+	display:block;
+    text-decoration:none;
+    color: #ffffff;
+	font-weight: 300;
+	font-size: .7em;
+	padding: 0.5em;
+}
+nav ul li {
+    border: 1px solid #f2f2f2;
+	/* position:relative;
+	float:left; */
+	margin: 0.3em;
+	padding: 0 0.5em;
+}
+nav ul li:hover {
+    background-color: #545454;
+}
+nav ul ul {
+	display:none;
+	position:absolute;
+	top:30%;
+    left: -70%;
+    padding: 0;
+    z-index: 30;
+}
+nav ul ul li {
+	float: none;
+    width: 140px;
+    background-color: #000000;
+}
+nav ul ul a {
+	line-height:120%;
+	padding: 7px 10px;
+}
+nav ul li:hover > ul {
+	display:block
+}
+
+/* Indice de galerías */
+.indice-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+.indice-galeria li {
+    position: relative;
+    max-width: 200px; 
+    margin: 0;
+    padding: 0.8rem;
+    font-size: 0.8rem;
+}
+.indice-galeria a {
+    color: #eee;
+    opacity: 0.5;
+}
+.indice-galeria canvas {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+}
+.text-indice-galeria {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000;
+    padding: 0 0.2em;
+}
+.indice-galeria a:hover {
+    opacity: 1;
+}
+span.text-indice-galeria {
+    color: rgb(255, 255, 255);
+    opacity: 1;
+}
+
+/* Resposive */
+
+@media screen and (max-width: 400px) {
+    .text-indice-galeria li { margin: 0; }
+    .text-indice-galeria { padding: 0; }
+    #container {
+        display: block;
+        background-color: #000000;
+    }
+    h1 {
+        color: red;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    #container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, auto);
+        grid-gap: 5px;
+        grid-template-areas:
+        ". . ca ca"
+        ". img img ."
+        ". img img ."
+        ". . . ."
+        ". . . ."
+        "pie pie pie pie"
+    }
+    h1 {
+        font-size: 20vw;
+        top: 10%;
+    }
+    #articulo {
+        grid-area: 3 / 2 / 5 / 5 ;
+    }
+}

@@ -11,7 +11,29 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,400i,600,700,900" rel="stylesheet">    <link rel="stylesheet" href="css/styles.css">
     <script src="js/bpgdec.js"></script>
     <style>
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
 
+section#slider { overflow: hidden; }
+section#slider figure canvas { width: 20%; float: left; }
+section#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite; 
+}
     </style>
 </head>
 
@@ -44,12 +66,13 @@
             <h1>Pepe Jiménez</h1>
             <h2>Fotógrafo</h2>
         </section>
-        <section id="imagen">
+        <section id="slider" class="imagen">
+            <figure>
                 <img src="images/13-JMJR7527_01.bpg" alt="Portada 1" class="slide" id="cover">
-                <!-- <div class="slide"><img src="images/wall_01.bpg" alt="Portada 2" class="slide"></div>
-                <div class="slide"><img src="images/hebron_71.bpg" alt="Portada 3" class="slide"></div> -->
+                <img src="images/wall_01.bpg" alt="Portada 2" class="slide">
+                <img src="images/hebron_71.bpg" alt="Portada 3" class="slide">
             
-            
+            </figure>
         </section>
         
 

@@ -18,8 +18,8 @@ html, body {
     grid-gap: 5px;
     grid-template-areas:
     ". . . . . . . ca"
-    ". . img img img img . ."
-    ". . img img img img . ."
+    ". img img img img img . ."
+    ". img img img img img . ."
     ". . . . . . . ."
     ". . . . . . . ."
     "pie pie pie pie pie pie pie pie"
@@ -28,7 +28,7 @@ ul {
     list-style-type: none;
 }
 #holder {
-    grid-area: 1 / 1 / 6 / 6 ;
+    grid-area: 1 / 1 / 4 / 6 ;
 }
 #galerias {
     grid-area: 5 / 2 / 6 / 8 ;
@@ -44,23 +44,23 @@ ul {
     width: 100vw;
     height: 950px;
 } */
-#imagen img, #imagen canvas {
+.imagen img, .imagen canvas {
     width: 55vw;
-    margin: 2rem;
+    margin: 0;
     border: #f2f2f2 2px solid;
-    transform: rotate(5deg);
-    box-shadow: 5px 5px 10px #424242;
+    /* transform: rotate(5deg); 
+    box-shadow: 5px 5px 10px #424242;*/
 }
 .logo {
     width: 150px;
     padding: 1rem;
 }
 h1 {
-    font-size: 20vw;
+    font-size: 14vw;
     font-family: 'Six Caps', sans-serif;
     line-height: 0;
     position: absolute;
-    top: -5%;
+    top: 5%;
     left: 5%;
     /* transform: translate(-50%, -50%); */
     padding: 0 0.2rem;
@@ -68,7 +68,7 @@ h1 {
     text-shadow: 5px 5px 10px #343434;
 }
 h2 {
-    font-size: 10vw;
+    font-size: 8vw;
     font-family: 'Six Caps', sans-serif;
     line-height: 0;
     position: absolute;
@@ -101,9 +101,15 @@ details {
 }
 header {
     grid-area: ca;
+    /* position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; */
 }
-#imagen {
+.imagen {
     grid-area: img;
+    transform: rotate(5deg); 
+    box-shadow: 5px 5px 10px #424242;
 }
 footer {
     grid-area: pie;

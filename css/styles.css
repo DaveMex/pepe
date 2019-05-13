@@ -2,6 +2,7 @@
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -18,7 +19,7 @@ html, body {
     grid-gap: 5px;
     grid-template-areas:
     ". . . . . . . ca"
-    ". img img img img img . ."
+    ". img img img img img . ca"
     ". img img img img img . ."
     ". . . . . . . ."
     ". . . . . . . ."
@@ -60,7 +61,8 @@ h1 {
     font-family: 'Six Caps', sans-serif;
     line-height: 0;
     position: absolute;
-    top: 5%;
+    z-index: 20;
+    top: 0;
     left: 5%;
     /* transform: translate(-50%, -50%); */
     padding: 0 0.2rem;
@@ -80,25 +82,48 @@ h2 {
     color: #fff;
     text-shadow: 5px 5px 10px #343434;
 }
+h3 {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 3.7rem;
+}
+.back h3 {
+    margin-top: -0.5rem;
+    margin-bottom: -0.5rem;
+}
+.indice-portafolio h3 {
+    color: #eee;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+#galerias {
+    height: 100vh;
+}
+.autor {
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 2rem;
+}
+.parrafos {
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    line-height: 1.8rem;
+    font-size: 0.9rem;
+}
+.parrafos p:first-child:first-letter {
+    color: #903;
+    float: left;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 6rem;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
 .logo-social {
     width: 2vw;
 }
-.back {
-    margin-top: 4em;
-    padding: 1em;
-    /* border: 1px solid #ffffff; */
-    background-color: rgba(255, 255, 255, 0.5);
-    height: auto;
-}
-details .texto {
-    height: 50vh;
-    overflow-y: scroll;
-    line-height: 1.8rem;
-}
-details {
-    font-family: 'Merriweather', serif;
-    color: #fff;
-}
+
 header {
     grid-area: ca;
     /* position: fixed;
@@ -120,6 +145,23 @@ footer {
     align-items: center;
 }
 
+
+.back {
+    margin-top: 4em;
+    padding: 1em;
+    /* border: 1px solid #ffffff; */
+    background-color: rgba(255, 255, 255, 0.5);
+    height: auto;
+}
+details .texto {
+    height: 50vh;
+    overflow-y: scroll;
+    line-height: 1.8rem;
+}
+details {
+    font-family: 'Merriweather', serif;
+    color: #fff;
+}
 summary:hover {
     cursor: pointer;
 }
@@ -217,7 +259,30 @@ span.text-indice-galeria {
     color: rgb(255, 255, 255);
     opacity: 1;
 }
-
+/* Slideshow portada */
+@keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+    }
+    
+    section#slider { overflow: hidden; }
+    section#slider figure canvas { width: 20%; float: left; }
+    section#slider figure { 
+      position: relative;
+      width: 500%;
+      margin: 0;
+      left: 0;
+      text-align: left;
+      font-size: 0;
+      animation: 30s slidy infinite; 
+    }
 /* Resposive */
 
 @media screen and (max-width: 400px) {
